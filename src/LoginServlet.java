@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
     private final String password = "123";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
-
+        response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
@@ -26,13 +26,7 @@ public class LoginServlet extends HttpServlet {
         System.out.println("user = " + user + " pwd = " + pwd);
         response.setContentType("text/plain");
         if(user.equals(userID) && pwd.equals(password)) {
-            out.println("<HTML>");
-            out.println("<HEAD><TITLE>Our First Servlet</TITLE></HEAD>");
-            out.println("<BODY>");
-            out.println("<TABLE>");
-            out.println("<A href=\"espace.html\">Espace</A>");
-            out.println("</TABLE></BODY></HTML>");
-            //HttpResponse.sendRedirect("Location: espace.html");
+            HttpResponse.sendRedirect("Location: espace.html");
 
         } else {
             out.println("Le login et/ou le mot de passe sont incorrects");

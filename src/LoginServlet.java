@@ -14,11 +14,11 @@ public class LoginServlet extends HttpServlet {
     private final String userID = "abc";
     private final String password = "123";
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
         response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
         ServletOutputStream out = response.getOutputStream();
         String user = request.getParameter("user");
         String pwd = request.getParameter("pwd");

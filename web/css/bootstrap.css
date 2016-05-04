@@ -9,6 +9,25 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+.rectangle {
+  height:160px;
+  margin-bottom:40px;
+  display:table;
+}
+
+
+.texte_encadre_noir {
+  font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size:16px;
+  display:table-cell;
+  vertical-align:middle;
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+  border-style:solid;
+  border-color:black;
+  background-color:#353535;
+}
 body {
   margin: 0;
 }

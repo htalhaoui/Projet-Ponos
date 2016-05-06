@@ -478,3 +478,14 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.texte_encadre_noir {
+    background-color: #355DA5;
+    text-decoration: solid;
+    border-color: transparent;
+}
+.texte_encadre_noir:hover{
+    text-decoration: solid;
+    font-weight: bold;
+    border-color: transparent;
+}

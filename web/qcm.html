@@ -4,7 +4,19 @@
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
     <title>qcm avec cases à cocher</title>
-    <script type="C:\Users\Hassan\IdeaProjects\Projet-Ponos\web\js\validateqcm.js"></script>
+    <script language="javascript">
+        <!-- cacher code
+        function test(nom,n) {
+            var rep=true;
+            for (i=0; i<n; i++) {
+                if (nom[i].value==1 && nom[i].checked==false) rep=false;
+                if (nom[i].value==0 && nom[i].checked==true) rep=false;
+            }
+            return rep;
+        }
+        //fin du script. -->
+    </script>
+
 </head>
 
 <body>
@@ -19,8 +31,10 @@
     <br><input type=checkbox name="choix" value=0>ses angles sont tous aigus</input>
     <br><input type=checkbox name="choix" value=1>il a deux angles égaux</input>
     <br><br>
-    <input type=button name="bouton" value="vérifier" onclick=validateqcm()>
+    <input type=button name="bouton" value="vérifier" onclick="if (test(choix,4)) {alert('bonne réponse.')}  else {alert('réponse fausse.')}">
     </input>
 </form>
+<hr>
+<a href="qcmcoche.txt" target="_blank">voir le fichier source</a>
 </body>
 </html>
